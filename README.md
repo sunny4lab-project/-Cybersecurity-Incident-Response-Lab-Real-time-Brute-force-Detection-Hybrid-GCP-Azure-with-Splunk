@@ -157,6 +157,106 @@ You have successfully created a Virtual Machine in Azure using the Azure Portal!
 - Set weak credentials for testing
 
 #### GCP (Linux)
+<details><summary>GCP VM creation Details Here</summary>
+
+Here’s a step-by-step guide to create a Linux (Ubuntu) VM on Google Cloud Platform (GCP):
+
+✅ Step 1: Set Up a Google Cloud Project
+- Go to Google Cloud Console.
+
+- Click on the project drop-down (top-left next to Google Cloud logo).
+
+- Select an existing project or click "New Project".
+
+- Give it a name, optionally set a billing account, then click "Create".
+
+✅ Step 2: Enable Compute Engine API
+1. In the GCP Console, navigate to: 
+
+bash 
+
+`` Navigation Menu > Compute Engine > VM instances ``
+
+![Screenshot 2025-05-21 143501](https://github.com/user-attachments/assets/d0ba917b-8bd9-404d-823b-d1eaba2d21a1)
+
+2. Click "Enable" to activate the Compute Engine API if prompted. This may take a few moments.
+
+✅ Step 3: Create a VM Instance
+Once you're on the VM instances page, click "Create Instance".
+
+![Screenshot 2025-05-21 143554](https://github.com/user-attachments/assets/bddb843a-7b9a-45cc-972d-5d8839e50d74)
+
+
+## Configure the VM:
+Name: Choose a name (e.g., ubuntu-vm-demo)
+
+![Screenshot 2025-05-21 143619](https://github.com/user-attachments/assets/23b1849d-80ee-4c39-b59d-575be10a0eda)
+
+
+Region & Zone: Pick your preferred region and zone (e.g., us-central1-a)
+
+Machine Configuration:
+
+Series: E2 (cost-efficient) or N2 if you need more power.
+
+![Screenshot 2025-05-21 143656](https://github.com/user-attachments/assets/0ca813ab-9fa0-48e4-9f65-ab81de7a7535)
+
+
+Machine type: e2-medium (2 vCPU, 4 GB RAM) is a common choice.
+
+## Boot Disk (OS):
+Click on “Change” under the Boot disk section.
+
+![Screenshot 2025-05-21 143743](https://github.com/user-attachments/assets/ae659eb2-75bd-4c6b-891c-04abe061bcc0)
+
+
+Choose:
+
+Operating System: Ubuntu
+
+![Screenshot 2025-05-21 143755](https://github.com/user-attachments/assets/c9dd2967-d658-40a0-9b12-38a74ee707ce)
+
+Version: Ubuntu 22.04 LTS (or latest available)
+
+Boot disk type: Standard persistent disk (for cost-saving) or SSD (for performance)
+
+Click Select
+
+## Firewall:
+Under Firewall, check:
+
+✅ "Allow HTTP traffic" (if you’ll host a web server)
+
+✅ "Allow HTTPS traffic"
+
+![Screenshot 2025-05-21 143838](https://github.com/user-attachments/assets/90c8b511-594e-4e48-a857-007ef965ddee)
+
+
+✅ Step 4: Create the VM
+Click the “Create” button at the bottom.
+
+![Screenshot 2025-07-03 142507](https://github.com/user-attachments/assets/5a2b7b30-4854-453f-98fd-0b7a49736bdb)
+
+
+GCP will now provision your Ubuntu VM. This may take 30–60 seconds.
+
+✅ Step 5: Connect to the VM (via SSH)
+Once your instance is running:
+
+On the VM list, click "SSH" next to your instance.
+
+![Screenshot 2025-07-04 172823](https://github.com/user-attachments/assets/3b484150-4e84-4d68-b5e8-c70fbd76bc22)
+
+
+It will open a browser-based SSH terminal.
+
+
+You now have shell access to your Ubuntu VM!
+
+![Screenshot 2025-07-04 172950](https://github.com/user-attachments/assets/f0838dea-2ad7-4793-bb8e-ac4f15215396)
+
+
+</details>
 - Open port 22 (SSH)
 - Monitor `/var/log/auth.log`
 
