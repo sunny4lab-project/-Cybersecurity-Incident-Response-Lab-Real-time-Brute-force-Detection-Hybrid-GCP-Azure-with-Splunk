@@ -260,7 +260,66 @@ You now have shell access to your Ubuntu VM!
 - Open port 22 (SSH)
 - Monitor `/var/log/auth.log`
 
-### 2. Install Splunk Universal Forwarder
+#
+### 2. Install Splunk  
+<details><summary>Details Here</summary>
+
+Let's walk through the Splunk installation process step by step. Splunk is a powerful platform for searching, monitoring, and analyzing machine-generated big data. The process can vary slightly depending on your operating system, but I'll guide you through the basic installation on Linux and Windows.
+
+✅ 1. Download Splunk
+For Linux (DEB):
+- Visit the Splunk download page. ``https://www.splunk.com/en_us/download``
+- Sign-in or create an account and it would give you access to the download page.
+
+Choose the version for Linux (RPM/DEB) depending on your system architecture:
+
+But for this Project I will be using DED for Debian-based systems (Ubuntu, etc.)
+
+![Screenshot 2025-07-04 175645](https://github.com/user-attachments/assets/d8ecdf25-4465-4f13-bcd2-90a87963ba22)
+
+
+DEB-based (Ubuntu, Debian):
+- Open a terminal. 
+- Paste the deb command you copied : ``  sudo wget -O splunkforwarder-9.4.3-237ebbd22314-linux-amd64.deb "https://download.splunk.com/products/universalforwarder/releases/9.4.3/linux/splunkforwarder-9.4.3-237ebbd22314-linux-amd64.deb" ``
+- 
+![Screenshot 2025-07-04 175245](https://github.com/user-attachments/assets/388c59c9-e090-4a7c-8e9e-9a2c952ff58f)
+
+  
+- Install the downloaded .deb package using dpkg. `` sudo dpkg -i ``
+
+✅ 2. Start Splunk
+Linux:
+1. After installation, you need to start Splunk from the command line. Go to the directory where Splunk is installed:
+
+``cd /opt/splunk/bin``
+
+2. Start Splunk:
+
+   ``sudo ./splunk start --accept-license``
+
+  - Important: The --accept-license flag ensures that you accept the Splunk license agreement.
+
+  - Splunk will prompt you to create a username and password for the admin account.
+
+    #
+✅ 3. Access Splunk Web Interface
+Once Splunk is running, you can access the web interface to start configuring and using Splunk.
+
+Open a web browser and navigate to:
+
+For local installation: http://localhost:8000
+
+For remote installation: http://<server-ip>:8000
+
+You should be prompted to log in with the admin username and password you created during the installation process.
+
+    
+
+</details>
+
+
+#
+### 3. Install Splunk Universal Forwarder
 
 #### On Windows (Azure VM):
 - Install Sysmon
