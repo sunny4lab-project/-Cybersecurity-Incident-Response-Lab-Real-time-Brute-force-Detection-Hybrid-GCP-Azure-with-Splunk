@@ -151,6 +151,7 @@ This guide provides step-by-step instructions for creating a Virtual Machine (VM
 
 ## Conclusion
 You have successfully created a Virtual Machine in Azure using the Azure Portal! From here, you can configure your VM further, install applications, or use it for testing and development. 
+
 </details>
 #### Azure (Windows)
 - Open port 3389 (RDP)
