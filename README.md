@@ -313,7 +313,8 @@ For remote installation: http://<server-ip>:8000
 
 You should be prompted to log in with the admin username and password you created during the installation process.
 
-    
+    ![Screenshot 2025-07-04 194003](https://github.com/user-attachments/assets/0be0b141-9aea-4303-91fe-d476bc38fa2b)
+
 
 </details>
 
