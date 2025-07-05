@@ -152,10 +152,12 @@ This guide provides step-by-step instructions for creating a Virtual Machine (VM
 ## Conclusion
 You have successfully created a Virtual Machine in Azure using the Azure Portal! From here, you can configure your VM further, install applications, or use it for testing and development. 
 
-</details>
-#### Azure (Windows)
+Azure (Windows)
 - Open port 3389 (RDP)
 - Set weak credentials for testing
+</details>
+
+
 
 #### GCP (Linux)
 <details><summary>GCP VM creation Details Here</summary>
@@ -257,9 +259,10 @@ You now have shell access to your Ubuntu VM!
 ![Screenshot 2025-07-04 172950](https://github.com/user-attachments/assets/f0838dea-2ad7-4793-bb8e-ac4f15215396)
 
 
-</details>
 - Open port 22 (SSH)
 - Monitor `/var/log/auth.log`
+</details>
+
 
 #
 ### 2. Install Splunk  
