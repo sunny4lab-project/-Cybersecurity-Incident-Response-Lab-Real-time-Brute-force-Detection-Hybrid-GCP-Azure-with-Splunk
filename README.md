@@ -331,6 +331,7 @@ You should be prompted to log in with the admin username and password you create
 
 ✅ Step 1: Download the Forwarder
 
+
 Go to: https://www.splunk.com/en_us/download/universal-forwarder.html
 
 
@@ -355,6 +356,8 @@ sudo dpkg -i splunkforwarder-*.deb
 
 ✅ Step 3: Start & Enable Splunk
 
+
+
 After downloading and installing the fowarder, go ahead and start the forwarder and also **set admin credentials when prompted.**
 
 
@@ -365,38 +368,55 @@ sudo /opt/splunkforwarder/bin/splunk enable boot-start
 
 ![Screenshot 2025-07-08 163532](https://github.com/user-attachments/assets/5017f223-0450-4291-af5c-8847b84fd2bd)
 
+
 ![Screenshot 2025-07-08 163723](https://github.com/user-attachments/assets/50c496ec-4d5e-4504-9bb6-897847f6a129)
 
 
+
 ✅ Step 4: Configure Receiving Indexer:
+
 Use previously set admin credentials when prompted
+
 
 ``
 sudo /opt/splunkforwarder/bin/splunk add forward-server <splunk-indexer-ip>:9997
 ``
 
 ✅ Step 5: Monitor Log Files (e.g., SSH auth logs)
+
+
 You will be asked to provide admin credentias . Use previously set admin credentials when prompted
+
+
 ``
 sudo /opt/splunkforwarder/bin/splunk add monitor /var/log/auth.log -sourcetype linux_secure -index linux
 ``
 
+
 ![Screenshot 2025-07-08 165311](https://github.com/user-attachments/assets/b7831201-33e1-401f-98f9-cdda9a0bd7b5)
 
+
+
 ✅ Step 6: Restart the Forwarder
+
 
 ``
 sudo /opt/splunkforwarder/bin/splunk restart
 ``
 
+
 ✅ Verify:
+
 
 It Should show Configured and Active. you are good to go now! 
 logs should be forwarded now to your indexer.
 
+
+
 ``
 sudo /opt/splunkforwarder/bin/splunk list forward-server
 ``
+
 
 ![Screenshot 2025-07-08 165443](https://github.com/user-attachments/assets/45baf2ea-e87e-4478-9670-fa94d87e22ef)
 
